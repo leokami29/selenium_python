@@ -14,14 +14,14 @@ with open("employees.json") as json_file:
 
         print(p["namepet"] + " is loading!")
 
-        driver.get("https://citas-leo.netlify.app/")
+        driver.get("http://localhost:3000/")
 
         # start = driver.find_element(By.XPATH,  "/html/body/app-root/div[2]/app-rpa1/div/div[1]/div[6]/button")
         # start.click()
         time.sleep(3)
 
         # print(start)
-            
+
         name_pet = driver.find_element(By.ID, "mascota")
         name_pet.send_keys(p["namepet"])
         time.sleep(1)
@@ -38,7 +38,7 @@ with open("employees.json") as json_file:
         alta = driver.find_element(By.ID, "Sintomas")
         alta.send_keys(p["sin"])
         
-        agregar = driver.find_element(By.CLASS_NAME, "bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-900 cursor-pointer transition-all")
+        agregar = driver.find_element(By.ID, "Agregar")
         agregar.click()
         time.sleep(3)
         
