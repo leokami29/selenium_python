@@ -1,20 +1,9 @@
 {
-    "employees": [
+    "keys": [
         {
-            "id": 1234567890,
-            "namepet": "Pet Testing One",
-            "namepro": "User Testing One",
-            "email": "Correo@correo.com",
-            "alta":"12/12/2000",
-            "sin":"Lorem imsup Lorem imsup Lorem imsup Lorem imsup Lorem imsupLorem imsupLorem imsupLorem imsupLorem imsupLorem imsupLorem imsup"
-        },
-        {
-            "id": 987654321,
-            "namepet": "User Testing Two",
-            "namepro": "User Testing Two",
-            "email": "Correo@correo.com",
-            "alta":"12/12/2000",
-            "sin":"Lorem imsup Lorem imsup Lorem imsup Lorem imsup Lorem imsupLorem imsupLorem imsupLorem imsupLorem imsupLorem imsupLorem imsup"
+            "usu": "admin",
+            "pass": 123123
         }
+        
     ]
 }

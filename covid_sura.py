@@ -10,11 +10,11 @@ with open("employees.json") as json_file:
     
     data = json.load(json_file)
 
-    for p in data["employees"]:
+    for p in data["keys"]:
 
-        print(p["namepet"] + " is loading!")
+        # print(p["namepet"] + " is loading!")
 
-        driver.get("http://localhost:3000/")
+        driver.get("https://henry-sanchez.com/gbm/")
 
         # start = driver.find_element(By.XPATH,  "/html/body/app-root/div[2]/app-rpa1/div/div[1]/div[6]/button")
         # start.click()
@@ -22,24 +22,30 @@ with open("employees.json") as json_file:
 
         # print(start)
 
-        name_pet = driver.find_element(By.ID, "mascota")
-        name_pet.send_keys(p["namepet"])
-        time.sleep(1)
+        usuario= driver.find_element(By.NAME, "usuario")
+        usuario.send_keys(p["usu"])
+        time.sleep(3)
         
-        name_pro = driver.find_element(By.ID, "Propietario")
-        name_pro.send_keys(p["namepro"])
+        npass = driver.find_element(By.NAME, "clave")
+        npass.send_keys(p["pass"])
+        time.sleep(3)
         
-        email = driver.find_element(By.ID, "Email")
-        email.send_keys(p["email"])
+        buttlogin = driver.find_element(By.CLASS_NAME, "login100-form-btn")
+        buttlogin.click()
         
-        alta = driver.find_element(By.ID, "Alta")
-        alta.send_keys(p["alta"])
+        nuevo = driver.find_element(By.XPATH, "/html/body/div/div/main/div[2]/div[1]/div/a")
+        nuevo.click()
+        # email = driver.find_element(By.ID, "Email")
+        # email.send_keys(p["email"])
         
-        alta = driver.find_element(By.ID, "Sintomas")
-        alta.send_keys(p["sin"])
+        # alta = driver.find_element(By.ID, "Alta")
+        # alta.send_keys(p["alta"])
         
-        agregar = driver.find_element(By.ID, "Agregar")
-        agregar.click()
+        # alta = driver.find_element(By.ID, "Sintomas")
+        # alta.send_keys(p["sin"])
+        
+        # agregar = driver.find_element(By.ID, "Agregar")
+        # agregar.click()
         time.sleep(3)
         
         
